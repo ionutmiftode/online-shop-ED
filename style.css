@@ -1,0 +1,336 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	/*border:1px solid black;*/
+}
+
+
+header{
+	background-color:#4F7404;
+	position: fixed;
+	width:100%;
+	z-index:3;
+	opacity:0.95;
+	top:0; /* am adaugat acest atribut pentru ca altfel header-ul se pozitiona cu 70px mai jos fata de primul layout, adica de #content*/
+}
+
+header nav{
+	width:90%;
+	margin:0 auto;
+	padding:1.5% 10px;
+	text-align: center;
+	
+}
+
+header ul{
+	list-style-type: none;
+	height:30px;
+}
+
+.cos, .cont, .toProductsPage{
+	display:inline-block;
+	float:right;
+	width: 12%;
+	padding:5px;
+	font-size: 19px;
+}
+.cos{
+	font-size: 25px;
+}
+
+.cos:hover, .cont:hover, .toProductsPage:hover{
+	color:#CED7A5;
+	border:1px solid #CED7A5;
+}
+
+header a{
+	text-decoration: none;
+	color:#B1BF61;
+}
+
+.logo{
+	float:left;
+	
+}
+.logo img{
+	height:40px;
+	border-radius: 50%;
+}
+
+.content{
+	margin-top:70px;
+	background-color: #CED7A5; /*are efect si asupra copiilor content2 si content3 doar dupa ce am adaugat un <div> sub ele si i-am setat clear:both*/
+}
+
+.sidebar{
+	float: left;
+	width:18%;
+}
+
+.sidebar ul{
+	list-style-type: none;
+}
+
+.sidebar li{
+	padding: 5% 15px;
+	width: 100%;
+}
+.sidebar a{
+	text-decoration: none;
+	color:#4F7404;
+}
+.sidebar a:hover{
+	color:#F4F3F0;
+}
+
+.sidebar li:hover{
+	background-color: #95C103;
+	
+}
+.categorii{
+	font-size: 1.5rem;
+	background-color: #95C103;
+	color:#4F7404;
+}
+
+
+main {
+	margin-left: 18%;
+	/*background-color:#95C103;*/
+	background-color: #e6e6e6;
+
+}
+
+
+.content1 article{
+	/*background-image: url("./website_pics/Cut-aloe-vera_copy.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;*/
+	height:250px;
+	position: relative;
+}
+
+.content1 article aside{
+	font-size:larger;
+	font-style:italic;
+	color:#4F7404;
+	position:absolute;
+	bottom:10px;
+	right: 10px;
+
+}
+
+.content2, .content3{
+	
+	float: left;
+	width:48%;
+	padding:10px;
+	text-align: center;
+	overflow:hidden;
+	margin-bottom:50px;
+}
+
+.title{
+	color:#4F7404;
+	font-size:150%;
+	margin-top:30px;
+}
+
+.ptClear{
+	clear:both;
+}
+footer{
+	clear: both;
+	width: 100%;
+	display:flex;
+	flex-flow: row flex;
+	background-color: #B1BF61;
+}
+
+.despre, .asistenta, .relatii_clienti, .social{
+	width:25%;
+	padding:0px 50px;
+}
+
+footer ul{
+	list-style-type: none;
+}
+
+footer a{
+	text-decoration: none;
+}
+
+footer ul{
+	padding: 30px;
+}
+.header{
+	font-size: larger;
+	color:#4F7404;
+	margin-bottom: 5px;
+	font-weight: bold;
+}
+
+footer a, .relatii_clienti li{
+	color:#4F7404;
+}
+
+footer .fa{
+	float:left;
+	padding-right: 15px;
+	font-size: 30px; 
+	color:#4F7404;
+}
+
+/*Tema2*/
+.addProducts{
+	background-color:white;
+	border:1px solid #808080;
+	margin:5px;
+	border-radius:10px;
+	padding:10px;
+}
+
+.addButton{
+	color:#4F7404;
+	font-weight:bold;
+	padding:3px;
+	margin:5px
+}
+
+#promPretRedus{
+	display:inline;
+	margin:3px;
+}
+
+#promPretInreg{
+	text-decoration: line-through;
+	color:#808080;
+	display:inline;
+}
+
+#nouPretRedus, #nouPretIntreg{
+	display:inline;
+}
+
+.prodImage{
+	height:100%;
+	max-height:150px;
+	width:auto;
+	overflow:hidden;
+}
+
+/*Tema3*/
+
+.cos{
+	float:right;
+	display: inline-block;
+}
+#bagIconContainer{
+	display: inline-block;
+	position: relative;
+}
+
+.counter{
+	width:15px;
+	height:15px;
+	font-size: 11px;
+	background-color:#DB0C0C;
+	color:white;
+	border-radius:50%;
+	position:absolute;
+	top:0px;
+	right: -7px;
+	text-align:center;
+}
+
+/*Tema4*/
+#compareContainer{
+	visibility: hidden;
+
+}
+.visibleClass{
+	visibility: visible;
+	position: fixed;
+	right: 5px;
+	bottom:30%;
+	width:50px;
+	border: 3px solid #73AD21;
+
+}
+
+.comparaCheckBox, .textCheckBox{
+	float:right;
+	margin-right:5px;
+}
+
+.textCheckBox{
+	font-size: 15px;
+}
+
+.productImage{
+	width:44px;
+	height: auto;
+}
+
+
+/*Tema 5 - productsPage.html*/
+.content1_item{
+	display:inline-block;
+	margin-top: 20px;
+	margin-left: 20px;
+}
+.main__content-produse{
+	width: 100%;
+	text-align: center;
+	padding: 50px 0px;
+}
+.produse-randate{
+	width:88%;
+	display:flex;
+	flex-wrap: wrap;
+}
+.renderedProduct{
+	display:inline-block;
+	width:44%;
+	padding:10px;
+	text-align: center;
+	overflow:hidden;
+	margin-bottom:50px;
+	background-color:white;
+	border:1px solid #808080;
+	margin:5px;
+	border-radius:10px;
+}
+
+/*Tema6 - */
+#slider-container{
+	overflow: hidden;
+	height: 250px;
+}
+
+#slider{
+	position: relative;
+	width: 300%;
+	animation-name: image;
+	animation-duration: 15s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate-reverse;
+}
+
+#slider div img{
+	width:33.33%;
+	height:auto;
+	float:left;
+}
+@keyframes image{
+   	0%   {right:0;}
+    20%  {right:0%;}
+    25%  {right:100%;}
+    45%  {right:100%;}
+    50%  {right:100%;}
+    70%  {right:100%;}
+    75%  {right:200%;}
+    95%  {right:200%;}
+    100%  {right:200%;}
+}
