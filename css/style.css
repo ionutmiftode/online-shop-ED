@@ -39,7 +39,7 @@ header ul{
 	font-size: 25px;
 }
 
-.cos:hover, .cont:hover, .toProductsPage:hover{
+.cont:hover, .toProductsPage:hover{
 	color:#CED7A5;
 	border:1px solid #CED7A5;
 }
@@ -198,18 +198,18 @@ footer .fa{
 	margin:5px
 }
 
-#promPretRedus{
+.promPretRedus{
 	display:inline;
 	margin:3px;
 }
 
-#promPretInreg{
+.promPretIntreg{
 	text-decoration: line-through;
 	color:#808080;
 	display:inline;
 }
 
-#nouPretRedus, #nouPretIntreg{
+.nouPretRedus, .nouPretIntreg {
 	display:inline;
 }
 
@@ -334,3 +334,29 @@ footer .fa{
     95%  {right:200%;}
     100%  {right:200%;}
 }
+
+/*Tema8*/
+
+#bagPopup {
+	visibility: hidden;
+}
+
+.visibleClassPopUp{
+	visibility: visible;
+	position: fixed;
+	top:80px;
+	right: 50px;
+	width:200px;
+	height: 100px;
+	border: 3px solid #73AD21;
+	background-color: #CED7A5;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#total, #totalPrice {
+	display :inline-block;
+
+}
+

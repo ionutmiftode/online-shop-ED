@@ -67,14 +67,18 @@ function renderProduct(product,i){
 	if(product.pretRedus==0){
 		pretRedus.innerHTML="";
 		pretIntreg.innerHTML=(product.pretIntreg).toFixed(2) +" Lei";
-		pretRedus.id="nouPretRedus";
-		pretIntreg.id="nouPretIntreg";
+		pretRedus.id="pretRedus"+i;
+		pretIntreg.id="pretIntreg"+i;
+		pretRedus.className="nouPretRedus";
+		pretIntreg.className="nouPretIntreg";
 	}
 	else{
 		pretRedus.innerHTML=(product.pretRedus).toFixed(2) + " Lei";
 		pretIntreg.innerHTML=(product.pretIntreg).toFixed(2);
-		pretRedus.id="promPretRedus";
-		pretIntreg.id="promPretInreg";
+		pretRedus.id="pretRedus"+i;
+		pretIntreg.id="pretIntreg"+i;
+		pretRedus.className="promPretRedus";
+		pretIntreg.className="promPretIntreg";
 	}
 	adauga.innerHTML="Adauga in cos";
 	adauga.className="addButton";
@@ -108,7 +112,9 @@ function renderProduct(product,i){
 	document.getElementById("main").addEventListener("click", addToBagButton2);
 	comparaCheckbox.addEventListener('change', compara);
 	//end for Tema4
-	
+
+	//Tema8
+	document.getElementById("shopCtx").addEventListener("click", visibleBagPopup);
 }
 
 var bagCounter=0; 
@@ -118,15 +124,46 @@ var bagCounter=0;
 	document.getElementById("productsCounter").className="counter";
 	document.getElementById("productsCounter").textContent = bagCounter;
 };*/
-
+var total = 0;
 //Tema4
-function addToBagButton2(event){
-	if(event.target && event.target.className == "addButton"){
+function addToBagButton2(event) {
+	var target = event.target;
+  	var parent = target.parentElement;
+  	var pretRedus = 0;
+  	var pretIntreg = 0;
+	if (event.target && event.target.className == "addButton") {
 		bagCounter++;
 		document.getElementById("productsCounter").className="counter";
 		document.getElementById("productsCounter").textContent = bagCounter;
+		var parentId = (parent.id).substr(7, 4);
+		pretRedus = parseFloat(document.getElementById("pretRedus"+parentId).innerHTML.substr(0, 4));
+		pretIntreg = parseFloat(document.getElementById("pretIntreg"+parentId).innerHTML.substr(0, 4));
+		if (pretRedus !== 0 && !isNaN(pretRedus)) {
+			total += pretRedus;
+			document.getElementById("totalPrice").textContent = total;
+		}else if(pretRedus === 0 || isNaN(pretRedus) ) {
+			total += pretIntreg;
+			document.getElementById("totalPrice").textContent = total;
+		}
+		
 	}
 }
+
+function visibleBagPopup(event) {
+	var ignore = document.getElementById("bagIconContainer");
+	var bagPopup = document.getElementById("bagPopup");
+	var target = event.target;
+	if ( target == ignore || ignore.contains(target)) {
+		if(bagPopup.style.visibility != 'visible') {
+			bagPopup.className = "visibleClassPopUp";
+			bagPopup.style.visibility = 'visible';
+		} 
+	} else {
+		bagPopup.className = "";
+		bagPopup.style.visibility = 'hidden';
+	}
+}
+
 
 function compara(event){
 	var myDiv=document.getElementById("compareContainer");
