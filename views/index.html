@@ -5,99 +5,106 @@
 	<meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
 	<script type="text/javascript" src="../js/script.js"></script>
+	<script type="text/javascript" src="../js/bag.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-	<header>
-		<nav>
-			<ul>
-				<li class="logo"><a href="index.html"><img src="../images/logo.png" alt="logo"></a></li>
-				<li class="cos">
-					<a href="#">
-						<div id="bagIconContainer">
-							<i class="fa fa-shopping-cart"></i>
-							<div id="productsCounter"></div></div></a></li>
-				<li class="cont"><a href="#"><p>Contul meu</p></a></li>
-				<li class="toProductsPage"><a href="productsPage.html"><p>Toate produsele</p></a></li>
-			</ul>
-		</nav>	
-	</header>
-	<div class="content">
-		<section class="sidebar">
-			<ul>
-				<li class="categorii">Categorii produse</li>
-				<li><a href="#">Sanatate si Imunitate</a></li>
-				<li><a href="#">Slabire si Detoxifiere</a></li>
-				<li><a href="#">Frumusete si Ingrijire personala</a></li>
-				<li><a href="#">Ingrijirea Casei</a></li>
-				<li><a href="#">Nutritie si Sport</a></li>
-			</ul>
-		</section>
-		<main id="main">
-			<div class="content1">
-				<article>
-					<div id="slider-container">
-						<div id="slider">
-							<div class="slide"><img src="../images/Cut-aloe-vera_copy2.jpg"/></div>
-							<div class="slide"><img src="../images/Cut-aloe-vera_copy3.jpg"/></div>
-							<div class="slide"><img src="../images/Cut-aloe-vera_copy.jpg"/></div>
+	<div class="shopCtx" id="shopCtx">
+		<header>
+			<nav>
+				<ul>
+					<li class="logo"><a href="index.html"><img src="../images/logo.png" alt="logo"></a></li>
+					<li class="cos">
+						<a href="#">
+							<div id="bagIconContainer">
+								<i class="fa fa-shopping-cart"></i>
+								<div id="productsCounter"></div></div></a></li>
+					<li class="cont"><a href="#"><p>Contul meu</p></a></li>
+					<li class="toProductsPage"><a href="productsPage.html"><p>Toate produsele</p></a></li>
+				</ul>
+			</nav>	
+		</header>
+		<div class="content">
+			<section class="sidebar">
+				<ul>
+					<li class="categorii">Categorii produse</li>
+					<li><a href="#">Sanatate si Imunitate</a></li>
+					<li><a href="#">Slabire si Detoxifiere</a></li>
+					<li><a href="#">Frumusete si Ingrijire personala</a></li>
+					<li><a href="#">Ingrijirea Casei</a></li>
+					<li><a href="#">Nutritie si Sport</a></li>
+				</ul>
+			</section>
+			<main id="main">
+				<div class="content1">
+					<article>
+						<div id="slider-container">
+							<div id="slider">
+								<div class="slide"><img src="../images/Cut-aloe-vera_copy2.jpg"/></div>
+								<div class="slide"><img src="../images/Cut-aloe-vera_copy3.jpg"/></div>
+								<div class="slide"><img src="../images/Cut-aloe-vera_copy.jpg"/></div>
+							</div>
 						</div>
-					</div>
-					<aside>
-						<p>"Natura-ti da zilnic exemplul de a trai" - Nicolae Iorga</p>
-					</aside>
+						<aside>
+							<p>"Natura-ti da zilnic exemplul de a trai" - Nicolae Iorga</p>
+						</aside>
+					</article>
+					
+				</div>
+				<article class="content2">
+					<p class="title">Promotii la produse</p>
+					<div id="produse_promotii"></div>
 				</article>
-				
-			</div>
-			<article class="content2">
-				<p class="title">Promotii la produse</p>
-				<div id="produse_promotii"></div>
-			</article>
-			<article class="content3">
-				<p class="title">Produse noi</p>
-				<div id="produse_noi"></div>
-			</article>
-			<div class="ptClear"></div>
-		</main>
+				<article class="content3">
+					<p class="title">Produse noi</p>
+					<div id="produse_noi"></div>
+				</article>
+				<div class="ptClear"></div>
+			</main>
 
+		</div>
+		<footer>
+			<section class="despre">
+				<ul>
+					<li class="header">Despre noi</li>
+					<li><a href="#">Noutati</a></li>
+					<li><a href="#">Contact</a></li>
+					<li><a href="#">ANPC</a></li>
+				</ul>
+			</section>
+			<section class="asistenta">
+				<ul>
+					<li class="header">Asistenta</li>
+					<li><a href="#">Cum comanzi</a></li>
+					<li><a href="#">Modalitati de plata</a></li>
+					<li><a href="#">Conditii de livrare</a></li>
+					<li><a href="#">Intrebari frecvente</a></li>
+					<li><a href="#">Politica retur</a></li>
+				</ul>
+			</section>
+			<section class="relatii_clienti">
+				<ul>
+					<li class="header">Relatii clienti</li>
+					<li>Mobil: 0752.xxx.xxx </li>
+					<li>Fix: 021.xxx.xxx</li>
+					<li>E: contact@shop-online.ro</li>
+					
+				</ul>
+			</section>
+			<section class="social">
+				<ul>
+					<li class="header">Urmareste-ne</li>
+					<a href="#"><i class="fa fa-facebook-square"></i></a> 
+					<a href="#"><i class="fa fa-instagram"></i></a> 
+				</ul>
+			</section>
+		</footer>
+		<div id="compareContainer"></div>
+		<div id="bagPopup">
+			<div id="total">Total:</div>
+			<div id="totalPrice"></div>
+		</div>
 	</div>
-	<footer>
-		<section class="despre">
-			<ul>
-				<li class="header">Despre noi</li>
-				<li><a href="#">Noutati</a></li>
-				<li><a href="#">Contact</a></li>
-				<li><a href="#">ANPC</a></li>
-			</ul>
-		</section>
-		<section class="asistenta">
-			<ul>
-				<li class="header">Asistenta</li>
-				<li><a href="#">Cum comanzi</a></li>
-				<li><a href="#">Modalitati de plata</a></li>
-				<li><a href="#">Conditii de livrare</a></li>
-				<li><a href="#">Intrebari frecvente</a></li>
-				<li><a href="#">Politica retur</a></li>
-			</ul>
-		</section>
-		<section class="relatii_clienti">
-			<ul>
-				<li class="header">Relatii clienti</li>
-				<li>Mobil: 0752.xxx.xxx </li>
-				<li>Fix: 021.xxx.xxx</li>
-				<li>E: contact@shop-online.ro</li>
-				
-			</ul>
-		</section>
-		<section class="social">
-			<ul>
-				<li class="header">Urmareste-ne</li>
-				<a href="#"><i class="fa fa-facebook-square"></i></a> 
-				<a href="#"><i class="fa fa-instagram"></i></a> 
-			</ul>
-		</section>
-	</footer>
-	<div id="compareContainer"></div>
 </body>
 </html>
 
